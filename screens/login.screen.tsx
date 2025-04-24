@@ -35,7 +35,7 @@ const LoginScreen = () => {
     </Text>
   </Text>
   </View>
-    <View className='mt-4 w-full flex-row items-center py-2 mt-10'>
+    <View className='w-full flex-row items-center py-2 mt-10'>
     <View className='bg-foreground h-[0.4px] flex-1'/>
     <Text className='text-foreground px-2'>Sign in with</Text>
     <View className='bg-foreground h-[0.4px] flex-1'/>
