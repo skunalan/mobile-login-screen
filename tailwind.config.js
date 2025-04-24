@@ -10,7 +10,8 @@ module.exports = {
         primary: "rgb(14, 14, 14)",
         placeholder:"rgb(160, 160, 160)",
         secondary:"rgb(249, 251, 254)",
-        foreground:"rgb(173, 173, 173 )"
+        foreground:"rgb(173, 173, 173 )",
+        link: "rgb(65, 118, 206)"
       },
       spacing : {
         page: 30,

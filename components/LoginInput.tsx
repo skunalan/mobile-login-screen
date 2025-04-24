@@ -10,14 +10,24 @@ const LoginInput = (props: { placeholder: string; type: 'email' | 'password' }) 
     setIsSecure(!isSecure);
   };
 
+  const leftIconName = () => {
+    return props.type === `email` ? `mail-outline` : `lock-closed-outline`
+  }
+
   return (
     <View className="mb-4">
-      <View>
+      <View className="flex-row items-center h-20 rounded-full bg-secondary px-4">
+      <Ionicons
+          name={leftIconName()}
+          size={20}
+          color={TAILWIND_CONFIG.colors.placeholder}
+          className="mr-2"
+        />
         <TextInput
           secureTextEntry={props.type === `password` ? isSecure : false}
           placeholder={props.placeholder ?? `Placeholder`}
           placeholderTextColor={TAILWIND_CONFIG.colors.placeholder}
-          className="h-14 rounded-full bg-secondary text-placeholder"
+          className="h-20 rounded-full bg-secondary text-placeholder"
         />
         {props.type === `password` && (
           <TouchableOpacity
@@ -27,6 +37,7 @@ const LoginInput = (props: { placeholder: string; type: 'email' | 'password' }) 
           </TouchableOpacity>
         )}
       </View>
+
     </View>
   );
 };
